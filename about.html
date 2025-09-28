@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Tarun | Frontend Web-Developer</title>
+  <style>
+    @media only screen and (max-width: 480px) {
+  /* Yahan apni CSS likhein jo sirf 480px ya choti screens (mobile phones) para apply hogi */
+  body {
+    background-color: lightblue;
+  }
+  /* Example: font size bada karna phone ke liye */
+  p {
+    font-size: 16px;
+  }
+}
+
+
+        body {
+          background: #181d27;
+          color: #fff;
+          font-family: 'Poppins', Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+
+        header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 32px 40px 0 40px;
+        }
+
+        .logo {
+          font-weight: bold;
+          font-size: 1.3rem;
+          letter-spacing: 1.5px;
+        }
+
+        nav a {
+          color: #fff;
+          text-decoration: none;
+          margin-left: 40px;
+          font-weight: 500;
+          font-size: 1rem;
+          opacity: 0.8;
+          transition: opacity 0.2s;
+        }
+
+        nav a:hover {
+          opacity: 1;
+        }
+
+        .about-main {
+          max-width: 900px;
+          margin: 70px auto 60px auto;
+          background: #141821;
+          border-radius: 18px;
+          box-shadow: 0 2px 18px rgb(255 131 96 / 12%);
+          padding: 40px 50px;
+          text-align: left;
+        }
+
+        .about-title {
+          font-size: 2.2rem;
+          font-weight: bold;
+          color: #fff;
+          margin-bottom: 10px;
+          letter-spacing: 1px;
+          text-align: center;
+        }
+
+        .subtitle {
+          color: #ff8360;
+          font-size: 1.2rem;
+          font-weight: 600;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+
+        ul.points-list {
+          list-style-type: disc;
+          padding-left: 24px;
+          color: #bbb;
+          font-size: 1.1rem;
+          line-height: 1.6em;
+          letter-spacing: 0.6px;
+        }
+
+        ul.points-list li {
+          margin-bottom: 26px;
+          max-width: 100%;
+        }
+
+        ul.points-list li:last-child {
+          margin-bottom: 0;
+        }
+
+        @media (max-width: 720px) {
+          .about-main {
+            margin: 20px 15px 40px 15px;
+            padding: 30px 20px;
+          }
+
+          header {
+            padding: 22px 16px 0 16px;
+          }
+
+          nav a {
+            margin-left: 20px;
+          }
+
+          .about-title {
+            font-size: 1.8rem;
+          }
+        }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">TARUN</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contacts</a>
+    </nav>
+  </header>
+  <section class="about-main" aria-label="About Tarun Frontend Web Development Passion">
+    <div class="about-title">About Me</div>
+    <div class="subtitle">Passion for Frontend Web Development & Project Building</div>
+    <ul class="points-list">
+      <li>I am deeply passionate about front-end web development and continuously enhance my skills to build amazing
+        user experiences.</li>
+      <li>Building projects engages my creativity and problem-solving abilities, making frontend coding truly enjoyable
+        for me.</li>
+      <li>Transforming designs into interactive and responsive websites excites me and motivates me to deliver quality
+        results.</li>
+      <li>Writing clean, efficient code is something I take pride in as it ensures maintainability and optimal
+        performance.</li>
+      <li>Exploring new tools and frameworks keeps me energized and ahead in this fast-evolving development landscape.
+      </li>
+      <li>Collaborating on projects allows me to learn from others and share my enthusiasm for frontend development.
+      </li>
+      <li>Optimizing websites for accessibility and cross-browser consistency is part of my commitment to great user
+        experiences.</li>
+      <li>Debugging and refining my projects is a rewarding process that improves my skills and the final product.</li>
+      <li>I revel in bringing static designs to life through animations and smooth interactions that delight users.</li>
+      <li>Ultimately, creating frontend projects is not just work—it’s a source of joy and continuous growth in my
+        career.</li>
+    </ul>
+  </section>
+</body>
+
+</html>

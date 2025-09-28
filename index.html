@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tarun | Frontend Web-Developer Portfolio</title>
+  <style>
+    @media only screen and (max-width: 480px) {
+  /* Yahan apni CSS likhein jo sirf 480px ya choti screens (mobile phones) para apply hogi */
+  body {
+    background-color: lightblue;
+  }
+  /* Example: font size bada karna phone ke liye */
+  p {
+    font-size: 16px;
+  }
+}
+
+    body {
+      background: #181d27;
+      color: #fff;
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 32px 40px 0 40px;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.3rem;
+      letter-spacing: 1.5px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 40px;
+      font-weight: 500;
+      font-size: 1rem;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    nav a:hover {
+      opacity: 1;
+    }
+    .main-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 80px;
+      margin-bottom: 0;
+    }
+    .left {
+      max-width: 570px;
+    }
+    .greet {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #fff;
+    }
+    .name {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .role {
+      font-size: 2.2rem;
+      font-weight: bold;
+      letter-spacing: 0.8px;
+      color: #fff;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    .btns {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 44px;
+    }
+    .btns button, .btns a {
+      background: #ff8360;
+      color: #fff;
+      padding: 13px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-right: 15px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btns .secondary {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+    .btns button:hover, .btns a:hover {
+      background: #ff5430;
+    }
+    .tech-stack {
+      display: flex;
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .tech-stack span {
+      background: #23263a;
+      padding: 8px 22px;
+      border-radius: 8px;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      color: #fff;
+      opacity: 0.85;
+      font-weight: 500;
+      margin-right: 6px;
+    }
+    .right {
+      position: relative;
+      width: 320px;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Outer circle with glowing orange highlight */
+    .circle-bg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: #181d27;
+      box-shadow: 0 0 20px 8px rgba(255, 131, 96, 0.6);
+      border: 4px solid #ff8360;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+    /* Circular image with border and shadow */
+    .profile-img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #23263a;
+      background: #23263a;
+      box-shadow: 0 2px 24px rgba(255, 131, 96, 0.42);
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+    .content-bottom {
+      background: #141821;
+      display: flex;
+      padding: 58px 80px;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .services {
+      width: 340px;
+    }
+    .services .service {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 44px;
+    }
+    .services .service i {
+      font-size: 1.6rem;
+      color: #ff8360;
+    }
+    .services .service:last-child {
+      margin-bottom: 0;
+    }
+    .services .service-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .about-section {
+      max-width: 600px;
+      color: #fff;
+    }
+    .about-section h2 {
+      font-size: 1.7rem;
+      margin-bottom: 25px;
+    }
+    .about-section p {
+      line-height: 1.8em;
+      color: #bbb;
+      font-size: 1.08rem;
+      text-align: justify;
+    }
+    .icon-web {
+      width: 36px; 
+      height: 36px;
+      background: #ff8360;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.4rem;
+    }
+    .footer-credit {
+    position: fixed;
+    bottom: 12px;
+    right: 18px;
+    font-size: 0.9rem;
+    color: #ff8360;
+    font-weight: 600;
+    font-family: 'Poppins', Arial, sans-serif;
+    pointer-events: none; /* Clicks pass through */
+    user-select: none; /* Text not selectable */
+    z-index: 9999;
+  }
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TARUN</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contacts</a>
+       <a href="resume.html">Resume</a>
+    </nav>
+  </header>
+  <section class="main-section">
+    <div class="left">
+      <div class="greet">Hello<span style="color:#ff8360;">.</span></div>
+      <div class="name">I'm Tarun</div>
+      <div class="role">FRONTEND WEB-DEVELOPER</div>
+      <div class="btns">
+        <button> <a href="gotaproject.html"></a></button>
+       
+      </div>
+      <div class="tech-stack">
+        <span>HTML5</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+      </div>
+    </div>
+    <div class="right">
+      <div class="circle-bg"></div>
+      <img src="tarun.jpg" alt="Tarun Profile Picture" class="profile-img" />
+    </div>
+  </section>
+  <section class="content-bottom">
+    <div class="services">
+      <div class="service">
+        <div class="icon-web">&#128187;</div>
+        <div class="service-title">Front-end development</div>
+      </div>
+      <div class="service">
+        <div class="icon-web">&#128196;</div>
+        <div class="service-title">Website Templates</div>
+      </div>
+      <div class="service">
+        <div class="icon-web">&#128187;</div>
+        <div class="service-title">Website Hosting</div>
+      </div>
+    </div>
+    <div class="about-section">
+      <h2>About me</h2>
+      <p>
+        As a frontend web developer, I am deeply passionate about crafting engaging and responsive user interfaces using HTML, CSS, and JavaScript.
+      </p>
+    </div>
+  </section>
+  <div class="footer-credit">Created by TARUN SHARMA</div>
+</body>
+</html>
